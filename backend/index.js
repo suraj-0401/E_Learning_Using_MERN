@@ -9,6 +9,7 @@ import activeUser from './routes/routes.activeUsers.js'
 import courseRoutes from './routes/routes.course.js'
 import { initWebSocket } from './websocket/websocketServer.js';
 import http from 'http'
+import path from 'path';
 dotenv.config();
 const app = express();
 const server=http.createServer();
@@ -17,6 +18,9 @@ const server=http.createServer();
 app.use(express.json());
 app.use(cors())
 dotenv.config();
+
+// path 
+const _dirname=path.resolve();
 
 // Database connection
 connectDb;
@@ -39,10 +43,16 @@ app.use('/api/user',activeUser);
 // course routes
 app.use('/api/admin',courseRoutes);
 
-app.get('/', (req, res) => {
-  res.send('Server is running');
-});
+// app.get('/', (req, res) => {
+//   res.send('Server is running');
+// });
 
+// join with frontened 
+app.use(express.static(path.join(_dirname,'/frontened/build')))
+
+app.get('*',(_,res)=>{
+  res.sendFile(path.resolve(_dirname,"frontened","build","index.html"))
+})
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
