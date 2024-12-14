@@ -7,7 +7,7 @@ const FooterSection = () => {
     <footer className="bg-black text-gray-400 py-12">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
         <div>
-          <h2 className="text-red-500 text-xl font-bold mb-4">takeUforward</h2>
+          <h2 className="text-red-500 text-xl font-bold mb-4">EduVerse</h2>
           <p className="mb-4">
             The best place to learn data structures, algorithms, most asked coding interview questions, and real interview experiences free of cost.
           </p>
@@ -34,10 +34,10 @@ const FooterSection = () => {
         <div>
           <h3 className="text-red-500 text-lg font-semibold mb-4">Quick Access</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white">Striver's DSA Sheet</a></li>
-            <li><a href="#" className="hover:text-white">Striver's DSA Playlist</a></li>
+            <li><a href="#" className="hover:text-white"> DSA Sheet</a></li>
+            <li><a href="#" className="hover:text-white"> DSA Playlist</a></li>
             <li><a href="#" className="hover:text-white">CS Subjects</a></li>
-            <li><a href="#" className="hover:text-white">Striver's CP Sheet</a></li>
+            <li><a href="#" className="hover:text-white"> CP Sheet</a></li>
           </ul>
         </div>
 
@@ -52,7 +52,7 @@ const FooterSection = () => {
         </div>
       </div>
       <div className="text-center mt-12 text-sm text-gray-600">
-        Copyright &copy; 2024 takeUforward | All rights reserved
+        Copyright &copy; 2024 EduVerse | All rights reserved
       </div>
     </footer>
   );

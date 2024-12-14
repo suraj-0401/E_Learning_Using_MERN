@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Features = () => {
   const data = [
@@ -58,9 +59,11 @@ const Features = () => {
               </div>
               <h3 className="text-xl font-semibold text-white">{item.title}</h3>
               <p className="text-gray-400 mt-2">{item.description}</p>
+              <Link to='/course-details'>
               <button className="mt-4 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-blue-500 transition-colors duration-300">
                 Try it free →
               </button>
+              </Link>
             </div>
           </div>
         ))}

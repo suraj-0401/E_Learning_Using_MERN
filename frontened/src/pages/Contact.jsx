@@ -25,7 +25,7 @@ function Contact() {
     }
   }
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen bg-black">
       {/* Sidebar */}
       <div className="flex-grow md:flex md:flex-row">
         <div className="bg-gray-900 text-white w-full md:w-1/4 p-10">
@@ -61,11 +61,11 @@ function Contact() {
           </div>
         </div>
         
-        <div className="md:col-span-8 p-10 flex-grow bg-gray-100">
+        <div className="md:col-span-8 p-10 flex-grow bg-black">
           <form  onSubmit={handleSubmmit}
             action="#" 
             method="POST" 
-            className="space-y-6 max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg"
+            className="space-y-6 max-w-2xl mx-auto bg-blue p-8 rounded-lg shadow-lg"
           >
             <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">Contact Us</h2>
             

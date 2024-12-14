@@ -17,6 +17,8 @@ import PaymentCheckout from './payment/PaymentCheckout';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import CourseHome from './pages/course/CourseHome';
+import CourseDetails from './pages/course/CourseDetails.jsx';
+
 
 function App() {
   const location = useLocation();
@@ -42,11 +44,10 @@ function App() {
         <Route path="/course" element={<CourseHome />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/post-course" element={<PostCourse />} />
-        
-        <Route path="/payment" element={<PaymentCheckout />} />
-        
-      </Routes>
+        <Route path="/course-details" element={<CourseDetails />} />
 
+        <Route path="/payment" element={<PaymentCheckout />} />
+      </Routes>
       {!noHeaderFooterRoutes.includes(location.pathname) && <Footer />}
     </div>
   );

@@ -43,14 +43,10 @@ function Navbar() {
     navigate('/login');
   };
 
-
   return (
-    <nav className={`bg-white border-b border-gray-200 dark:bg-gray-900 ${themeClasses}`}>
+    <nav className={`bg-gradient-to-r from-gray-900 to-black border-b border-gray-200 dark:bg-gradient-to-r dark:from-black dark:to-gray-900 ${themeClasses} shadow-lg`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link
-          to="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             E-learning
           </span>
@@ -63,20 +59,8 @@ function Navbar() {
             type="button"
           >
             <h1>Menu</h1>
-            <svg
-              className="w-2.5 h-2.5 ms-3"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m1 1 4 4 4-4"
-              />
+            <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
             </svg>
           </button>
 
@@ -84,21 +68,19 @@ function Navbar() {
             <div className="absolute right-0 mt-96 w-64 bg-gradient-to-r from-white to-gray-50 rounded-lg shadow-lg border border-gray-300 z-10 dark:from-gray-800 dark:to-gray-700 dark:border-gray-600 transform transition-all duration-300 ease-in-out">
               <div className="px-5 py-4 text-sm font-semibold text-gray-900 dark:text-white bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-800 rounded-t-lg">
                 <div className="mb-1">{userDetails.role}</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400 truncate">
-                  {userDetails.email}
-                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 truncate">{userDetails.email}</div>
               </div>
 
-              {/* Menu Items */}
               <ul className="py-2 text-gray-700 dark:text-gray-200 divide-y divide-gray-100 dark:divide-gray-600">
                 <li className="hover:scale-105 transition-transform">
-                  {userDetails.role==='admin' && <Link
-                    to="/dashboard"
-                    className="block px-5 py-3 hover:text-blue-700 hover:bg-blue-50 dark:hover:text-blue-300 dark:hover:bg-gray-700 rounded-lg"
-                  >
-                    Dashboard
-                  </Link> 
-                  }
+                  {userDetails.role === 'admin' && (
+                    <Link
+                      to="/dashboard"
+                      className="block px-5 py-3 hover:text-blue-700 hover:bg-blue-50 dark:hover:text-blue-300 dark:hover:bg-gray-700 rounded-lg"
+                    >
+                      Dashboard
+                    </Link>
+                  )}
                 </li>
                 <li className="hover:scale-105 transition-transform">
                   <button
@@ -147,20 +129,8 @@ function Navbar() {
             aria-expanded={isOpen ? "true" : "false"}
           >
             <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
+            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
             </svg>
           </button>
         </div>
@@ -169,7 +139,7 @@ function Navbar() {
           className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? "block" : "hidden"} md:block`}
           id="navbar-user"
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <Link
                 to="/"
@@ -203,7 +173,6 @@ function Navbar() {
                 Contact
               </Link>
             </li>
-            
           </ul>
         </div>
       </div>

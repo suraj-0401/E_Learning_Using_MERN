@@ -3,9 +3,9 @@ import React from 'react';
 const InstructorProfile = () => {
   return (
     <>
-      <div className="bg-black text-white min-h-screen flex flex-col items-center py-12">
+      <div className="bg-black text-white min-h-screen flex flex-col items-center py-12 px-4">
         <h1 className="text-red-500 text-xl uppercase font-semibold mb-4">Instructor</h1>
-        <h2 className="text-4xl font-bold mb-8">Meet Our Exceptional Instructor</h2>
+        <h2 className="text-4xl font-bold mb-8">Meet Our Instructor</h2>
 
         <div className="flex flex-col md:flex-row items-center max-w-6xl mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden space-y-8 md:space-y-0 md:space-x-8">
           {/* Left Section: Image */}
@@ -19,7 +19,7 @@ const InstructorProfile = () => {
 
           {/* Right Section: Info */}
           <div className="md:w-1/2 p-6 space-y-6">
-            <h3 className="text-2xl font-bold">Raj Vikramaditya</h3>
+            <h3 className="text-2xl font-bold">Suraj Shekhar</h3>
             <p className="text-sm font-light text-gray-400">SWE-III @ Google | Founder takeUforward</p>
 
             <ul className="list-disc ml-5 space-y-2 text-gray-300">

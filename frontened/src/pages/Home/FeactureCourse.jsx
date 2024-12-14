@@ -4,7 +4,7 @@ const Features = () => {
   const data = [
     {
       id: 1,
-      title: "Striver's DSA Sheet",
+      title: "EduVerse  DSA Sheet",
       description: "Boost your DSA skills with our handy cheat sheets.",
       icon: "📝", // Replace with appropriate icons/images
     },
@@ -23,8 +23,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-black flex flex-col justify-center items-center py-12 px-4 min-h-screen">
-      {/* Title Section */}
+    <div className="bg-black flex flex-col justify-center items-center py-36 px-4 min-h-screen">
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
           Featured Courses

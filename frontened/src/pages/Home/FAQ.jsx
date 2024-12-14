@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const FAQs = [
   "What's the best way to prepare for coding interviews?",
   "How should I approach system design interview questions?",
-  "Are the Striver's SDE sheet questions enough for interview preparation?",
-  "How do I get the most out of your website or TUF community?",
+  "Are the EduVerse  SDE sheet questions enough for interview preparation?",
+  "How do I get the most out of your website or EduVerse  community?",
   "What are the essential things to cover in core coding subjects?",
   "Do you offer any mentorship or career guidance programs?",
 ];

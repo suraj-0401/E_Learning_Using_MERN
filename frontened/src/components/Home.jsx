@@ -5,6 +5,7 @@ import FeactureCourse from '../pages/Home/FeactureCourse';
 import HomeInstructor from '../pages/Home/HomeInstructor';
 import Testimonials from '../pages/Home/Testimonials';
 import FAQ from '../pages/Home/FAQ';
+import CommunitySection from '../pages/Home/Community.jsx';
 
 function Home() {
   
@@ -12,6 +13,7 @@ function Home() {
     <div>
         <Hero/>
         <FeactureCourse/>
+        <CommunitySection/>
         <StartSection/>
         <HomeInstructor/>
         <Testimonials/>
