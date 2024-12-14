@@ -11,11 +11,12 @@ import Dashboard from './dashboard/Dashboard';
 import PostCourse from './dashboard/PostCourse';
 // import ProtectedRoute from './ProtectedRoutes/LoginVerify';
 import PaymentCheckout from './payment/PaymentCheckout';
-import Course from './pages/course/Course';
-import CourseDetails from './pages/course/CourseDetails';
-import MyCourse from './pages/course/MyCourse';
+// import Course from './pages/course/Course';
+// import CourseDetails from './pages/course/CourseDetails';
+// import MyCourse from './pages/course/MyCourse';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import CourseHome from './pages/course/CourseHome';
 
 function App() {
   const location = useLocation();
@@ -38,13 +39,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/course" element={<Course />} />
-        <Route path="/course/:id" element={<CourseDetails />} />
+        <Route path="/course" element={<CourseHome />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/post-course" element={<PostCourse />} />
+        
         <Route path="/payment" element={<PaymentCheckout />} />
-        <Route path="/my-course" element={<MyCourse />} />
-
+        
       </Routes>
 
       {!noHeaderFooterRoutes.includes(location.pathname) && <Footer />}

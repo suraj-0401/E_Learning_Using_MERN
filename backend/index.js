@@ -53,6 +53,7 @@ app.use(express.static(path.join(_dirname,'/frontened/build')))
 app.get('*',(_,res)=>{
   res.sendFile(path.resolve(_dirname,"frontened","build","index.html"))
 })
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

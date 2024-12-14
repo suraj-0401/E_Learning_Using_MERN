@@ -64,6 +64,7 @@ const Login = () => {
   return (
     <div className="h-screen bg-gray-50 flex flex-col justify-center items-center">
       <div className="bg-white border border-gray-300 w-96 py-10 flex items-center flex-col mb-4 shadow-md">
+        
         <h2 className="text-3xl font-semibold text-gray-900 mb-6">Login</h2>
 
         <form className="w-72 flex flex-col" onSubmit={handleLogin}>

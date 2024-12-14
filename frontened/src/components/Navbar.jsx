@@ -203,6 +203,7 @@ function Navbar() {
                 Contact
               </Link>
             </li>
+            
           </ul>
         </div>
       </div>
