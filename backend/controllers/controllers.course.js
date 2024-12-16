@@ -1,5 +1,6 @@
 import { upload, uploadToCloudinary } from "../middleware/multer.js";
 import Course from "../models/models.course.js";
+import User from "../models/models.user.js";
 
 export const postCourse = async (req, res) => {
   upload(req, res, async (err) => {

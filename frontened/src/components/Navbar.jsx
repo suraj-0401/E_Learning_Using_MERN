@@ -90,6 +90,17 @@ function Navbar() {
                     Theme
                   </button>
                 </li>
+               
+                {/* <Link to='/edit?id<%=user._id %>'>
+                <li className="hover:scale-105 transition-transform">
+                  <button
+                    onClick={toggleTheme}
+                    className="block px-5 py-3 hover:text-blue-700 hover:bg-blue-50 dark:hover:text-blue-300 dark:hover:bg-gray-700 rounded-lg"
+                  >
+                    Edit
+                  </button>
+                </li>
+                </Link> */}
 
                 <li className="hover:scale-105 transition-transform">
                   <Link

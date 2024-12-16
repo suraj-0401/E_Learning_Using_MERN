@@ -79,4 +79,36 @@ export const login = async (req, res) => {
 }
 
 
-export default { signup,login };
+export const editProfile = async (req, res) => {
+  try {
+    const userId = req.params.id; 
+    const { name, email } = req.body;
+    console.log(userId);
+    const user = await User.findById(userId);
+    console.log(user);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    else {
+      res.redirect('/');
+    }
+
+    if (name) user.name = name;
+    if (email) user.email = email;
+
+    await user.save();
+
+    res.status(200).json({
+      message: 'User profile updated successfully',
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+      },
+    });
+  } catch (error) {
+    console.error('Error updating user profile:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+export default { signup,login,editProfile };
